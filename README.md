@@ -36,18 +36,19 @@ The run_analysis.R script merges data from a number of .txt files and produces a
 
 - Renames the columns of training and test datasets with the appropriate feature's name;
 
-- Merge together the three test data and the three training data, and then together again in one data.frame ("FullData")
+- Merge the three test data and the three training data, and then combine them in one data.frame ("FullData");
 
-- Using the "grep" function, all the columns with mean() and std() values are extracted and then a new data frame, including only the "activity_id", the "subject_id" and the mean() and std() columns, is created    
+- Create a dataset using the "grep" function with only columns with mean() and std() values, including only the "activityNumber", the "subjectNumber" and the mean() and std() columns ("std_mean_Data");
 
-- Using the "merge" function, descriptive activity names are merged with the mean/std values dataset, to get one dataset with descriptive activity names
+- Merge the descriptive activity names with the mean/std values dataset, to get one dataset with descriptive activity names ("Descr_std_mean_Data");
 
-- Lastly, with the help of the "melt" and "dcast" functions of the "reshape2" package, the data is converted into a table containing mean values of all the included features, ordered by the activity name and the subject id, and the data is written to the "tidyData.txt" file.
+- Converte mean values of all the included features into a table, ordered by the activityDescription and the subjectNumber ("Descr_melt")
+
+- Write down the file without row names.
 
 The tidy dataset is available here:
 https://s3.amazonaws.com/coursera-uploads/user-79bc3638751665e5f2de754d/973502/asst-3/d63a33b0177111e5bd26d991f7ae653f.txt
-
-A description of "tidyData.txt" file may be found in the "CodeBook.md" file. 
+(A description of "tidyData.txt" file may be found in the "CodeBook.md" file) 
 
 
 Acknowledgements:
